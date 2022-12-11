@@ -15,14 +15,15 @@ describe('Cadastro', ()=> {
       whatsapp: '91988882020',
       endereco: {
         cep: '66025190',
-        rua: 'Osvaldo de caldas brito',
+        rua: 'Rua Osvaldo de Caldas Brito',
         numero: '269',
         complemento: 'Portal da Amazônia',
         bairro: 'Jurunas',
         cidade_uf: 'Belém/PA'
-      }
+      },
+      metodo_entrega: 'Bicicleta'
     }
-
+    
     cy.get('input[name="name"]').type(entregador.nome)
     cy.get('input[name="cpf"]').type(entregador.cpf)
     cy.get('input[name="email"]').type(entregador.email)
@@ -32,5 +33,12 @@ describe('Cadastro', ()=> {
     cy.get('input[type="button"][value="Buscar CEP"]').click()
     cy.get('input[name="address-number"]').type(entregador.endereco.numero)
     cy.get('input[name="address-details"]').type(entregador.endereco.complemento)
+    
+    cy.get('input[name="address"]').should('have.value', entregador.endereco.rua)
+    cy.get('input[name="district"]').should('have.value', entregador.endereco.bairro)
+    cy.get('input[name="city-uf"]').should('have.value', entregador.endereco.cidade_uf)
+
+    cy.contains('.delivery-method li', entregador.metodo_entrega).click()
+
   })
 })
