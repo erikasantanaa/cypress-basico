@@ -1,0 +1,35 @@
+{
+    "signup": {
+        "name": "Érika Santana",
+        "cpf": "00000014114",
+        "email": "erikatester@gmail.com",
+        "whatsapp": "91988882020",
+        "address": {
+          "postalcode": "66025190",
+          "street": "Rua Osvaldo de Caldas Brito",
+          "number": "269",
+          "details": "Portal da Amazônia",
+          "district": "Jurunas",
+          "city_state": "Belém/PA"
+        },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    },
+
+    "cpf_inv": {
+        "name": "Maria Santana",
+        "cpf": "x00000141AA",
+        "email": "mariatester@gmail.com",
+        "whatsapp": "91988880000",
+        "address": {
+          "postalcode": "66025190",
+          "street": "Rua Osvaldo de Caldas Brito",
+          "number": "269",
+          "details": "polo",
+          "district": "Jurunas",
+          "city_state": "Belém/PA"
+        },
+        "delivery_method": "Moto",
+        "cnh": "cnh-digital.jpg"
+    }
+}
