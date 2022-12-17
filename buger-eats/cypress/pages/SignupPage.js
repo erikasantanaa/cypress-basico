@@ -1,8 +1,3 @@
-/**PascalCase -> cada começo de palavra começa com
- * letra maiúscula, ao contrario de camlCase.
- * A função não precisa function ou => .
-*/
-
 class SignupPage {
     go() {
         cy.viewport(1440, 900)
@@ -41,11 +36,6 @@ class SignupPage {
     }
 
     alertMessageShouldBe(expecteMessage) {
-        /**combinar texto com classe, buscando um unico elemento.
-        busca o elemento para depois validar.
-        cy.get('.alert-error').should('have.text', expecteMessage)*/
-        
-        //busca o elemento combinado com o texto e verifica se está visivel 
         cy.contains('.alert-error', expecteMessage).should('be.visible')
     }
 
